@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-    <head>
-        <meta charset="utf-8">
-        <script type="text/javascript">
-            function submitDataAction() {
-                fubon.submitPaymentData(document.getElementById("token").getAttribute("data-token"), document.getElementById("money").getAttribute("data-money"));
-            }
-        </script>
-    </head>
-    <body>
-        <div>
-            <p id='token' data-token='test1234567890'>TOKEN: test1234567890</p>
-            <br>
-            <p id='money' data-money='9999'>金額: 9999</p>
-            <br>
-            <button class="btn btn-lg btn-primary btn-block" type="button" onClick="submitDataAction()">Submit</button>
-        </div>
-    </body>
+
+  <head>
+    <meta charset="utf-8">
+    <script type="text/javascript">
+      function sampleWebView() {
+        StoreMap.action("WebView", "https://www.google.com.tw/");
+      }
+
+      function sampleLocation() {
+        StoreMap.action("Location", "Permission");
+      }
+
+    </script>
+  </head>
+
+  <body>
+    <div>
+      <button type="button" onClick="callAndroidWebView()">WebView</button>
+      <button type="button" onClick="callAndroidLocation()">Location</button>
+    </div>
+  </body>
+
 </html>
